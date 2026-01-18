@@ -1,9 +1,4 @@
-mod cli;
-mod dicom;
-mod fs_ops;
-mod report;
-mod sanitize;
-mod sort;
+use dcmsort::{cli, fs_ops, report, sort};
 
 use anyhow::Result;
 use clap::Parser;
