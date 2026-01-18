@@ -20,7 +20,13 @@ pub fn setup_test_data() -> PathBuf {
     let url = "https://github.com/neurolabusc/dcm_qa_ct/archive/refs/heads/master.zip";
     println!("Downloading test data from {}", url);
 
-    let response = reqwest::blocking::get(url)
+    let client = reqwest::blocking::Client::builder()
+        .timeout(std::time::Duration::from_secs(300))
+        .build()
+        .expect("Failed to build reqwest client");
+
+    let response = client.get(url)
+        .send()
         .expect("Failed to download test data");
     let content = response.bytes()
         .expect("Failed to read response bytes");
