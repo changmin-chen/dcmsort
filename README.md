@@ -1,4 +1,4 @@
-# DICOM Sorter
+# dcmsort
 
 A Rust console application for sorting medical imaging DICOM files by metadata, designed for efficiency and safety.
 
@@ -30,7 +30,7 @@ cargo build --release --features parallel
 Basic usage:
 
 ```bash
-dicom-sorter --input /path/to/dicom/files --output /path/to/sorted --dry-run
+dcmsort --input /path/to/dicom/files --output /path/to/sorted --dry-run
 ```
 
 ### Command-line Options
@@ -57,31 +57,31 @@ dicom-sorter --input /path/to/dicom/files --output /path/to/sorted --dry-run
 **Dry-run to preview operations:**
 
 ```bash
-dicom-sorter --input ./raw --output ./sorted --dry-run
+dcmsort --input ./raw --output ./sorted --dry-run
 ```
 
 **Copy files with default settings:**
 
 ```bash
-dicom-sorter --input ./raw --output ./sorted
+dcmsort --input ./raw --output ./sorted
 ```
 
 **Move files with geometry-based sorting:**
 
 ```bash
-dicom-sorter --input ./raw --output ./sorted --mode move --sort-by geometry
+dcmsort --input ./raw --output ./sorted --mode move --sort-by geometry
 ```
 
 **Generate metadata report:**
 
 ```bash
-dicom-sorter --input ./raw --output ./sorted --report metadata.json
+dcmsort --input ./raw --output ./sorted --report metadata.json
 ```
 
 **Include PHI in folder names (use with caution):**
 
 ```bash
-dicom-sorter --input ./raw --output ./sorted --include-phi
+dcmsort --input ./raw --output ./sorted --include-phi
 ```
 
 ## Output Structure
@@ -142,10 +142,10 @@ Control verbosity with `RUST_LOG` environment variable:
 
 ```bash
 # Windows PowerShell
-$env:RUST_LOG="debug"; dicom-sorter --input ./raw --output ./sorted
+$env:RUST_LOG="debug"; dcmsort --input ./raw --output ./sorted
 
 # Linux/macOS
-RUST_LOG=debug dicom-sorter --input ./raw --output ./sorted
+RUST_LOG=debug dcmsort --input ./raw --output ./sorted
 ```
 
 ## Safety Considerations

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document describes how to validate that DICOM Sorter has correctly organized your files.
+This document describes how to validate that dcmsort has correctly organized your files.
 
 ## Pre-Sorting Validation
 
@@ -31,7 +31,7 @@ Manually inspect a few files to understand the dataset:
 **Always run with --dry-run first:**
 
 ```bash
-dicom-sorter --input ./raw --output ./sorted --dry-run > plan.txt
+dcmsort --input ./raw --output ./sorted --dry-run > plan.txt
 ```
 
 Review `plan.txt` to check:
@@ -62,7 +62,7 @@ find ./sorted -type f -name "*.dcm" | wc -l
 Generate a JSON report:
 
 ```bash
-dicom-sorter --input ./raw --output ./sorted --report metadata.json
+dcmsort --input ./raw --output ./sorted --report metadata.json
 ```
 
 **Check**:

@@ -1,8 +1,8 @@
-# Design Document: DICOM Sorter
+# Design Document: dcmsort
 
 ## Overview
 
-This document describes the design decisions, sorting rules, layout strategies, and PHI (Protected Health Information) policies for the DICOM Sorter application.
+This document describes the design decisions, sorting rules, layout strategies, and PHI (Protected Health Information) policies for the dcmsort application.
 
 ## Core Design Principles
 
