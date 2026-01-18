@@ -156,10 +156,37 @@ RUST_LOG=debug dcmsort --input ./raw --output ./sorted
 
 ⚠️ **Backup**: Always test with `--dry-run` first and maintain backups of original data.
 
-## License
+## Testing
 
-[Specify your license here]
+To run the integration tests with real DICOM data:
+
+```bash
+cargo test
+```
+
+The test suite automatically downloads a BSD-licensed sample dataset (`dcm_qa_ct`) on the first run to ensure correctness without requiring you to provide your own medical images.
+
+## Development
+
+- **Build**: `cargo build`
+- **Lint**: `cargo clippy`
+- **Format**: `cargo fmt`
 
 ## Contributing
 
-[Specify contribution guidelines here]
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Acknowledgments
+
+- [dicom-rs](https://github.com/Enet4/dicom-rs) - The excellent DICOM library that powers this tool.
+- [dcm_qa_ct](https://github.com/neurolabusc/dcm_qa_ct) - Used for automated testing.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

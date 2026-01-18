@@ -3,6 +3,12 @@ name = "dcmsort"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.85"
+description = "A fast and safe DICOM sorter written in Rust"
+license = "MIT"
+authors = ["Changmin Chen"]
+categories = ["command-line-utilities", "science"]
+keywords = ["dicom", "medical-imaging", "sorter", "header-only"]
+readme = "README.md"
 
 [dependencies]
 anyhow = "1"
