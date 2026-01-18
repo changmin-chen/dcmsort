@@ -1,5 +1,6 @@
-use clap::{Parser, ValueEnum};
+use clap::Parser;
 use std::path::PathBuf;
+use dcmsort::types::{Mode, Layout, SortBy};
 
 #[derive(Parser, Debug)]
 #[command(name = "dcmsort", version, about = "Sort DICOM files by metadata (header-only).")]
@@ -40,26 +41,4 @@ pub struct Cli {
     /// Write a JSON report (metadata only)
     #[arg(long, value_name = "FILE")]
     pub report: Option<PathBuf>,
-}
-
-#[derive(Copy, Clone, Debug, ValueEnum)]
-pub enum Mode {
-    Copy,
-    Move,
-    HardLink,
-}
-
-#[derive(Copy, Clone, Debug, ValueEnum)]
-pub enum Layout {
-    PatientStudySeries,
-    StudySeries,
-    SeriesOnly,
-    Flat,
-}
-
-#[derive(Copy, Clone, Debug, ValueEnum)]
-pub enum SortBy {
-    Auto,
-    Instance,
-    Geometry,
 }

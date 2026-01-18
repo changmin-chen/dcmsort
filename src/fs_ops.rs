@@ -1,4 +1,4 @@
-use crate::cli::Mode;
+use crate::types::Mode;
 use crate::sort::Plan;
 use anyhow::{Context, Result};
 use std::fs;

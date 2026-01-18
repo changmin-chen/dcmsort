@@ -24,8 +24,8 @@ fn test_sort_real_dicom_series() {
     let plan = sort::plan_operations(
         &metas, 
         &output_dir, 
-        dcmsort::cli::Layout::SeriesOnly,
-        dcmsort::cli::SortBy::Auto, 
+        dcmsort::types::Layout::SeriesOnly,
+        dcmsort::types::SortBy::Auto, 
         false
     );
     

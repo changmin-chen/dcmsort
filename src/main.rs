@@ -1,4 +1,6 @@
-use dcmsort::{cli, fs_ops, report, sort};
+mod cli;
+
+use dcmsort::{fs_ops, report, sort};
 
 use anyhow::Result;
 use clap::Parser;

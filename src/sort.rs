@@ -1,4 +1,4 @@
-use crate::cli::{Layout, SortBy};
+use crate::types::{Layout, SortBy};
 use crate::dicom::{read_meta, DicomMeta};
 use crate::sanitize::sanitize_component;
 use std::cmp::Ordering;

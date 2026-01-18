@@ -1,4 +1,4 @@
-pub mod cli;
+pub mod types;
 pub mod dicom;
 pub mod fs_ops;
 pub mod report;
